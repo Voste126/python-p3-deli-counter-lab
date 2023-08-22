@@ -3,12 +3,14 @@ katz_deli = []
 def line(katz_deli):
     if not katz_deli:
         line_message = "The line is currently empty."
+        print(line_message)
     else:
         line_message = "The line is currently:"
-        for index, customer in enumerate(katz_deli, start=1):
-            line_message += f" {index}. {customer}"
-    
-    return line_message
+        # # for index, customer in enumerate(katz_deli, start=1):
+        #     line_message += f" {index}. {customer}"
+        for i in range(len(katz_deli)): 
+            line_message += f" {i + 1}. {katz_deli[i]}"
+        print(line_message)
 
 def take_a_number(katz_deli, new_customer):
     katz_deli.append(new_customer)
